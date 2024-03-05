@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatiable" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/d192cade4e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo" width="200px">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+
+        </nav>
+        <div class="header-text">
+            <p>Frontend Developer</p>
+            <h1>Hi, I'm <span> Gourishankar </span><br></h1>
+        </div>
+    </div>
+  </div>
+  <!-- -------------about------------ -->
+  <div id="about">
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> Hey there, I'm Gourishankar, a seasoned web designer with a knack
+                        for turning ideas into captivating digital experiences. With a 
+                        strong foundation in design principles and a passion for staying
+                        ahead of the curve, I'm always ready to tackle new projects and bring
+                        fresh perspectives to the table.<br>Driven by a thirst for knowledge 
+                        and improvement, I thrive on challenges and constantly seek innovative
+                        ways to enhance my skills. Whether it's crafting sleek user interfaces 
+                        or optimizing user experiences, I'm dedicated to delivering results that
+                        exceed expectations. Let's collaborate and bring your vision to life in the digital world.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Web app Development</li>
+                                <li><span>Frontend</span><br>Building Websites</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2024 - Current</span><br>Web development Training at xyz Institute</li>
+                                <li><span>2020 - 2022</span><br>Frontend development Trainee at krystal Soft Solutions Ltd. </li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2020</span><br>Web Development Training at Krystal Soft Solutions </li>
+                                <li><span>2019</span><br>Diploma in Computer Science Engineering</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------Slills--------------------->
+    <div id="Skills">
+        <div class="container">
+            <h1 class="sub-title">My Skills</h1>
+            <div class="Skills-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web design</h2>
+                    <p> "I specialize in web design, proficient in visual design, UI design, and responsive design techniques. Using tools like Adobe Photoshop, I craft modern and user-friendly websites, staying updated with evolving trends to deliver impactful digital experiences."</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-camera"></i>                         <h2>Photography</h2>
+                    <p> "I excel in photography, capturing moments with creativity and precision. Through composition, lighting, and post-processing techniques, I bring stories to life, showcasing the beauty and emotion in every frame."</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>App development</h2>
+                    <p>"My expertise lies in UI/UX design, where I merge user interface creativity with user experience optimization. By crafting intuitive interfaces and conducting user research, I create engaging digital experiences that prioritize user satisfaction and efficiency."</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-----------------Portfolio----------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work3.jpeg" alt="">
+                <div class="layer">
+                    <h3>web App</h3>
+                    <p>An app that connects to the morden world and can download it from the plau store.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work1 (2).jpg" alt="">
+                <div class="layer">
+                    <h3>Capture the world</h3>
+                    <p>"Golden hues of a breathtaking sunset, the majestic fort stands as a timeless sentinel, adorned by the soft embrace of twilight's beauty."</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work2.png" alt="">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>An app that connects to the morden world and can download it from the plau store.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-------------contact------------>
+<div id="contact">
+<div class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-phone"></i>contact@xyz.com</p>
+                <p><i class="fa-solid fa-paper-plane"></i>123456890</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/home"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/MY_CV.pdf" download class="btn btn2">Download CV</a>
+            </div>
+        </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+
+        </div>
+    </div>
+    <div class="copyright">Copyright © Gourishankar kommera </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right= "0";
+    }
+    function closemenu(){
+        sidemenu.style.right= "-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzTu5xYt1E-aMo91Il-JV_OkNFjyj9Dwq0WJk23c5OKR8jbiEjPaN8V-JKUsycQxXhEQw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML =""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
