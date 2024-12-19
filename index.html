@@ -7,6 +7,222 @@
         <title>Personal Portfolio Website</title>
         <link rel="stylesheet" href="style.css">
         <script src="https://kit.fontawesome.com/d192cade4e.js" crossorigin="anonymous"></script>
+
+
+        <style>
+            /* Slicebox Style */
+.sb-slider {
+  margin: 10px auto;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+}
+
+.sb-slider li {
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.sb-slider li > a {
+  outline: none;
+}
+
+.sb-slider li > a img {
+  border: none;
+}
+
+.sb-slider img {
+  max-width: 100%;
+  display: block;
+}
+
+.sb-description {
+  padding: 20px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  z-index: 1000;
+  position: absolute;
+  background: #CBBFAE;
+  background: rgba(190,176,155, 0.4);
+  border-left: 4px solid rgba(255,255,255,0.7);
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0); 
+  opacity: 0;
+  color: #fff;
+
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  -ms-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.sb-slider li.sb-current .sb-description {
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);  
+  opacity: 1;
+}
+
+.sb-slider li.sb-current .sb-description:hover {
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
+  filter: alpha(opacity=99);  
+  background: rgba(190,176,155, 0.7);
+}
+
+.sb-perspective {
+  position: relative;
+}
+
+.sb-perspective > div {
+  position: absolute;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  -webkit-backface-visibility : hidden;
+  -moz-backface-visibility : hidden;
+  -o-backface-visibility : hidden;
+  -ms-backface-visibility : hidden;
+  backface-visibility : hidden;
+}
+
+.sb-side {
+  margin: 0;
+  display: block;
+  position: absolute;
+
+  -moz-backface-visibility : hidden;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+
+/* custom style */
+.container {
+  margin: 30px;
+}
+
+.shadow {
+  width: 100%;
+  height: 168px;
+  position: relative;
+  margin-top: -110px;
+  background: transparent url(https://tympanus.net/Development/Slicebox/images/shadow.png) no-repeat bottom center;
+  background-size: 100% 100%; /* stretches it */
+  z-index: -1;
+  display: none;
+}
+
+.sb-description h3 {
+  font-size: 20px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+
+.sb-description h3 a {
+  color: #4a3c27;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.5);
+}
+
+.nav-arrows {
+  display: none;
+}
+
+.nav-arrows a {
+  width: 42px;
+  height: 42px;
+  background: #cbbfae url(https://tympanus.net/Development/Slicebox/images/nav.png) no-repeat top left;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  text-indent: -9000px;
+  cursor: pointer;
+  margin-top: -21px;
+  opacity: 0.9;
+  border-radius: 50%;
+  box-shadow: 0 1px 1px rgba(255,255,255,0.8);
+}
+
+.nav-arrows a:first-child{
+  left: auto;
+  right: 2px;
+  background-position: top right;
+}
+
+.nav-arrows a:hover {
+  opacity: 1;
+}
+
+.nav-dots {
+  text-align: center;
+  position: absolute;
+  bottom: -5px;
+  height: 30px;
+  width: 100%;
+  left: 0;
+  display: none;
+}
+
+.nav-dots span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin: 3px;
+  background: #cbbfae;
+  cursor: pointer;
+  box-shadow: 
+    0 1px 1px rgba(255,255,255,0.6), 
+    inset 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.nav-dots span.nav-dot-current {
+  box-shadow: 
+    0 1px 1px rgba(255,255,255,0.6), 
+    inset 0 1px 1px rgba(0,0,0,0.1), 
+    inset 0 0 0 3px #cbbfae,
+    inset 0 0 0 8px #fff;
+}
+
+.nav-options {
+  width: 70px;
+  height: 30px;
+  position: absolute;
+  right: 70px;
+  bottom: 0px;
+  display: none;
+}
+
+.nav-options span {
+  width: 30px;
+  height: 30px;
+  background: #cbbfae url(https://tympanus.net/Development/Slicebox/images/options.png) no-repeat top left;
+  text-indent: -9000px;
+  cursor: pointer;
+  opacity: 0.7;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.nav-options span:first-child{
+  background-position: -30px 0px;
+  margin-right: 3px;
+}
+
+.nav-options span:hover {
+  opacity: 1;
+}
+ </style>
 </head>
 <body>
   <div id="header">
@@ -36,48 +252,156 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/user.png" alt="">
+                    <img src="images/user.png" alt="Gourishankar Kommera">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p> Hey there, I'm Gourishankar, a seasoned web designer with a knack
-                        for turning ideas into captivating digital experiences. With a 
-                        strong foundation in design principles and a passion for staying
-                        ahead of the curve, I'm always ready to tackle new projects and bring
-                        fresh perspectives to the table.<br>Driven by a thirst for knowledge 
-                        and improvement, I thrive on challenges and constantly seek innovative
-                        ways to enhance my skills. Whether it's crafting sleek user interfaces 
-                        or optimizing user experiences, I'm dedicated to delivering results that
-                        exceed expectations. Let's collaborate and bring your vision to life in the digital world.</p>
+                    <p>
+                        Hey there, I'm Gourishankar Kommera, a cybersecurity enthusiast and web developer with a passion for solving complex challenges. My journey includes excelling in national-level hackathons like the *NCIIPC-AICTE Pentathon 2024* and *Beat the Kraken Fair Play Edition*, where my skills in password cracking and encryption were put to the test.
+                        <br><br>
+                        I specialize in web development, creating user-friendly and responsive websites using technologies like HTML, CSS, JavaScript, and Bootstrap. Additionally, I am deeply involved in cybersecurity, focusing on cryptographic algorithms, threat analysis, and network security.
+                        <br><br>
+                        Driven by a desire to learn and grow, I actively participate in cybersecurity communities like Null Hyderabad and have conducted awareness sessions in collaboration with the Hyderabad City Security Council (HCSC). Let's collaborate and bring secure, innovative solutions to life in the digital world.
+                    </p>
 
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                            <p class="tab-links" onclick="opentab('education')">Education</p>
-                        </div>
-                        <div class="tab-contents active-tab" id="skills">
-                            <ul>
-                                <li><span>Web Development</span><br>Web app Development</li>
-                                <li><span>Frontend</span><br>Building Websites</li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="experience">
-                            <ul>
-                                <li><span>2024 - Current</span><br>Web development Training at xyz Institute</li>
-                                <li><span>2020 - 2022</span><br>Frontend development Trainee at krystal Soft Solutions Ltd. </li>
-                            </ul>
-                        </div>
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span>2020</span><br>Web Development Training at Krystal Soft Solutions </li>
-                                <li><span>2019</span><br>Diploma in Computer Science Engineering</li>
-                            </ul>
-                        </div>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Responsive and Full-Stack Web Development</li>
+                            <li><span>Cybersecurity</span><br>Encryption, Network Security, and Threat Analysis</li>
+                            <li><span>Password Cracking</span><br>Advanced Hash Cracking Techniques</li>
+                            <li><span>Leadership</span><br>Digital Head & Public Relations Lead at StreetCause</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024 - Current</span><br>Research Intern, Cybersecurity & Deep Learning at IIIT Hyderabad</li>
+                            <li><span>2024</span><br>Grand Finalist, NCIIPC-AICTE Pentathon 2024</li>
+                            <li><span>2024</span><br>1st Place Winner, Beat the Kraken Fair Play Edition</li>
+                            <li><span>2022 - 2024</span><br>Digital Head, StreetCause</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024</span><br>B.Tech in Information Technology</li>
+                            <li><span>2022</span><br>Cybersecurity Workshops and Training</li>
+                            <li><span>2019</span><br>Diploma in Computer Science Engineering</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+    <!----------------- Achievements ----------------->
+    <center><h1 class="sub-title">Achievements</h1></center>
+    <div class="slider">
+      
+
+      <!-- list Items -->
+      <div class="list">
+          <div class="item active">
+              <img src="images/winner.jpg">
+              <div class="content">
+                <h2>Hackathon Winner</h2>
+                <p>
+                    Beat the Fair Play Edition 2024 - The Password Cracking Hackathon by ICE at T-Hub.
+        
+                    Cracked 37,000 out of 42,000 hashed passwords and won ₹1,00,000 cash prize.
+                </p>
+                
+              </div>
+          </div>
+          <div class="item">
+              <img src="images/Finalist.jpg">
+              <div class="content">
+                  <h2>Pentathon Finalist</h2>
+<p>
+    NCIIPC-AICTE Pentathon 2024 - Grand Finalist in a 48-hour challenge conducted in Delhi NCR.
+</p>
+
+              </div>
+          </div>
+          <div class="item">
+              <img src="images/Trophy.jpg">
+              <div class="content">
+                  <h2>Cybersecurity Hackathon Champion</h2>
+                  <p>
+                    <p>
+                        Secured the trophy by cracking 42   ,000 password hashes in 24+ hours with the help of ICE mentors.
+                    </p>
+                  </p>
+              </div>
+          </div>
+          <div class="item">
+              <img src="images/TEJ00167.jpg">
+              <div class="content">
+                  <p>design</p>
+                  <h2>Team Achievements</h2>
+                  <p>
+                    Celebrating collaboration and success! Here's a snapshot featuring the top 3 teams from the hackathon.
+               <br>
+                    A moment of pride and teamwork at the "Beat the Kraken Fair Play Edition" Hackathon by ICE at T-Hub.
+                </p>
+              </div>
+          </div>
+          <div class="item">
+              <img src="images/TEJ00177.jpg">
+              <div class="content">
+                  <h2>Participants and Organizers</h2>
+                  <p>
+                    A memorable gathering of all participants and organizers at the "Beat the Kraken Fair Play Edition" Hackathon by ICE at T-Hub.
+                </p>
+                <p>
+                    Celebrating teamwork, innovation, and the spirit of cybersecurity!
+                </p>
+              </div>
+          </div>
+      </div>
+      <!-- button arrows -->
+      <div class="arrows">
+          <button id="prev"><</button>
+          <button id="next">></button>
+      </div>
+         <!-- thumbnail -->
+         <div class="thumbnail">
+          <div class="item active">
+              <img src="images/winner.jpg">
+              <div class="content">
+                  
+              </div>
+          </div>
+          <div class="item">
+              <img src="images/Finalist.jpg">
+              <div class="content">
+              </div>
+          </div>
+          <div class="item">
+              <img src="images/Trophy.jpg">
+              <div class="content">
+              </div>
+          </div>
+          <div class="item">
+              <img src="images/TEJ00167.jpg">
+              <div class="content">
+              </div>
+          </div>
+          <div class="item">
+              <img src="images/TEJ00177.jpg">
+              <div class="content">
+              </div>
+          </div>
+      </div>
+  </div>
+
     <!-- ------------------Slills--------------------->
     <div id="Skills">
         <div class="container">
@@ -85,24 +409,32 @@
             <div class="Skills-list">
                 <div>
                     <i class="fa-solid fa-code"></i>
-                    <h2>Web design</h2>
-                    <p> "I specialize in web design, proficient in visual design, UI design, and responsive design techniques. Using tools like Adobe Photoshop, I craft modern and user-friendly websites, staying updated with evolving trends to deliver impactful digital experiences."</p>
+                    <h2>Web Development</h2>
+                    <p>
+                        I specialize in web development, focusing on responsive design, intuitive UI/UX, and seamless user experiences. Proficient with HTML, CSS, JavaScript, and frameworks like Bootstrap, I create modern, dynamic, and user-friendly websites. I also integrate backend technologies to ensure full-stack functionality.
+                    </p>
                     <a href="#">Learn more</a>
                 </div>
                 <div>
-                    <i class="fa-solid fa-camera"></i>                         <h2>Photography</h2>
-                    <p> "I excel in photography, capturing moments with creativity and precision. Through composition, lighting, and post-processing techniques, I bring stories to life, showcasing the beauty and emotion in every frame."</p>
-                    <a href="#">Learn more</a>
-                </div>
-                <div>
-                    <i class="fa-brands fa-app-store-ios"></i>
+                    <i class="fa-solid fa-shield-halved"></i>
                     <h2>Cybersecurity</h2>
-                    <p>"I have a strong cybersecurity skillset with experience in threat analysis, encryption, and network security. My projects demonstrate expertise in cryptographic algorithms, bidirectional communication using MAVLink, and drone security. I have excelled in hackathons, including *NCIIPC-AICTE Pentathon 2024* and *Beat the Kraken Fair Play Edition*. My research on security vulnerabilities in low-cost UAVs and experience with password cracking and encryption tools highlight my practical problem-solving abilities. I am also engaged in cybersecurity communities, such as Null Hyderabad and awareness sessions with the Hyderabad City Security Council (HCSC), showcasing my commitment to the field of cybersecurity."</p>
+                    <p>
+                        I have a strong cybersecurity skillset with expertise in threat analysis, encryption, and network security. My achievements include winning hackathons like *NCIIPC-AICTE Pentathon 2024* and *Beat the Kraken Fair Play Edition*. I’ve worked on projects involving cryptographic algorithms, bidirectional communication using MAVLink, and drone security. My research covers identifying vulnerabilities in UAVs and developing mitigation strategies. I'm actively involved in cybersecurity communities such as Null Hyderabad and have conducted awareness sessions with the Hyderabad City Security Council (HCSC).
+                    </p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-users"></i>
+                    <h2>Leadership & Team Management</h2>
+                    <p>
+                        As the Digital Head and Public Relations Lead for *StreetCause*, I manage social media campaigns, coordinate events, and promote initiatives to a broad audience. My leadership experience includes organizing hackathons, managing teams, and driving projects to successful completion.
+                    </p>
                     <a href="#">Learn more</a>
                 </div>
             </div>
         </div>
     </div>
+    
 
 <!-----------------Portfolio----------------------->
 <div id="portfolio">
@@ -212,6 +544,72 @@
         })
         .catch(error => console.error('Error!', error.message))
     })
+
+
+    
+  </script>
+  <script>
+    let items = document.querySelectorAll('.slider .list .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let thumbnails = document.querySelectorAll('.thumbnail .item');
+
+// config param
+let countItem = items.length;
+let itemActive = 0;
+// event next click
+next.onclick = function(){
+    itemActive = itemActive + 1;
+    if(itemActive >= countItem){
+        itemActive = 0;
+    }
+    showSlider();
+}
+//event prev click
+prev.onclick = function(){
+    itemActive = itemActive - 1;
+    if(itemActive < 0){
+        itemActive = countItem - 1;
+    }
+    showSlider();
+}
+// auto run slider
+let refreshInterval = setInterval(() => {
+    next.click();
+}, 5000)
+function showSlider(){
+    // remove item active old
+    let itemActiveOld = document.querySelector('.slider .list .item.active');
+    let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
+    itemActiveOld.classList.remove('active');
+    thumbnailActiveOld.classList.remove('active');
+
+    // active new item
+    items[itemActive].classList.add('active');
+    thumbnails[itemActive].classList.add('active');
+    setPositionThumbnail();
+
+    // clear auto time run slider
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(() => {
+        next.click();
+    }, 5000)
+}
+function setPositionThumbnail () {
+    let thumbnailActive = document.querySelector('.thumbnail .item.active');
+    let rect = thumbnailActive.getBoundingClientRect();
+    if (rect.left < 0 || rect.right > window.innerWidth) {
+        thumbnailActive.scrollIntoView({ behavior: 'smooth', inline: 'nearest' });
+    }
+}
+
+// click thumbnail
+thumbnails.forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+        itemActive = index;
+        showSlider();
+    })
+})
   </script>
 </body>
 </html>

@@ -140,6 +140,190 @@ nav ul li a:hover::after{
     display: block;
 
 }
+/* Main slider */
+.slider {
+    width: 80%; /* Adjust width to fit like a window */
+    height: 600px; /* Set a fixed height for the window-like slider */
+    position: relative;
+    margin: 50px auto; /* Center the slider horizontally and add margin from top */
+    background-color: #111;
+    overflow: hidden;
+    border-radius: 15px; /* Add rounded corners for a window-like effect */
+    box-shadow: 0 0 15px rgba(1, 23, 23, 0.6); /* Neon blue glow effect */
+}
+.slider .list .item::before {
+    background-position: center;
+    filter: blur(10px);
+    opacity: 0.5; /* Adjust opacity for the background */
+    z-index: -1; 
+}
+/* Slider items */
+.slider .list .item {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slider .list .item img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:contain; /* Ensure images cover the entire slider */
+}
+
+/* Gradient effect for item */
+.slider .list .item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 40%, transparent);
+}
+
+/* Content inside the slider */
+.slider .list .item .content {
+    position: absolute;
+    left: 10%;
+    bottom: 25%;
+    width: 500px;
+    max-width: 80%;
+    z-index: 1;
+    color: #fff;
+    text-align: left;
+}
+
+.slider .list .item .content p:nth-child(1) {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+
+.slider .list .item .content h2 {
+    font-size: 30px;
+    margin: 0;
+    color: #f6f4f4; /* Neon blue text color */
+}
+
+/* Active item styles */
+.slider .list .item.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active p {
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 0.7s ease-in-out forwards;
+}
+
+.slider .list .item.active h2 {
+    animation-delay: 1s;
+}
+
+.slider .list .item.active p {
+    animation-duration: 1.3s;
+}
+
+/* Arrows for navigation */
+.arrows {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    right: 20px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrows button {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    font-family: monospace;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #eee;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.arrows button:hover {
+    background-color: #087ede; /* Neon Blue Hover */
+    color: black;
+}
+
+/* Thumbnail section */
+.thumbnail {
+    position: absolute;
+    bottom: 20px;
+    z-index: 11;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 100px; /* Adjust the height for the thumbnail window */
+    padding: 0 50px;
+    box-sizing: border-box;
+    overflow: auto;
+    justify-content: center;
+}
+
+.thumbnail::-webkit-scrollbar {
+    width: 0;
+}
+
+.thumbnail .item {
+    width: 100px;
+    height: 100%;
+    filter: brightness(0.2);
+    transition: 0.5s;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.thumbnail .item.active {
+    filter: brightness(0.5);
+}
+
+/* Thumbnail content */
+.thumbnail .item .content {
+    position: absolute;
+    inset: auto 10px 10px 10px;
+}
+
+@media screen and (max-width: 678px) {
+    .thumbnail {
+        justify-content: start;
+    }
+    .slider .list .item .content h2  {
+        font-size: 60px;
+    }
+    .arrows {
+        top: 10%;
+    }
+}
 
 /*-----------Slills--------*/
 #Skills{
@@ -397,3 +581,4 @@ nav .fa-solid{
     margin-top: -40px;
     display: block;
 }
+
